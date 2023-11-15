@@ -59,7 +59,16 @@ public class ProductoServiceImpl implements ProductoService{
         productoDao.delete(producto);
     }
     
+     //Ejemplo de una consulta con un Quety
+    public List <Producto> consultaQuery(double precioInf,double precioSup){
+    return productoDao.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
     
+    }
     
+       //Ejemplo de una consulta con un JPQL
+    public List <Producto> consultaJPQL(double precioInf,double precioSup){
+    return productoDao.consultaJPQL(precioInf, precioSup);
+    
+    }
     
 }

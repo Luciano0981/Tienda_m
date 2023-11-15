@@ -26,4 +26,10 @@ public interface ProductoService {
     // Se elimina el producto que tiene el id pasado por parámetro
     public void delete(Producto producto);
     
+    //Ejemplo de una consulta con un Quety
+    public List <Producto> consultaQuery(double precioInf,double precioSup);
+    
+    //Ejemplo de una consulta con un JPQL
+    public List <Producto> consultaJPQL(double precioInf,double precioSup);
+    
 }
